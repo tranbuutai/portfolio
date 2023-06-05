@@ -1,0 +1,98 @@
+header {
+  @apply h-24 w-full;
+  .container {
+    margin: 0 auto;
+    .wrapper {
+      @apply px-12 py-0;
+      .home {
+        @apply flex h-full w-full flex-col items-center justify-center;
+        p {
+          @apply text-xs font-medium uppercase tracking-[.3rem];
+        }
+        h5 {
+          @apply text-2xl font-semibold;
+        }
+      }
+    }
+  }
+  .inner-header {
+    @apply relative z-10 flex h-24 items-center justify-between;
+    .logo a {
+      @apply font-bold text-blue-700;
+    }
+    .menu {
+      @apply text-[0.8rem];
+    }
+  }
+  .hamburger-menu {
+    @apply fixed inset-0 z-[9] h-full w-full;
+    display: none;
+    .menu-secondary-background-color {
+      @apply fixed inset-0 -z-[1] h-full w-full bg-blue-500;
+    }
+    .menu-layer {
+      @apply relative h-full overflow-hidden bg-blue-300;
+      .menu-city-background {
+        @apply absolute inset-0 h-full w-full opacity-0;
+
+        animation-name: backgroundEffect;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+      }
+      .wrapper {
+        @apply relative;
+        .menu-links {
+          @apply relative top-[200px] flex items-center;
+          nav {
+            @apply flex;
+            ul {
+              @apply m-0 p-0;
+              li {
+                @apply relative h-32 w-[700px] cursor-pointer overflow-hidden text-8xl font-bold;
+                a {
+                  @apply absolute text-white hover:text-blue-700;
+                }
+              }
+            }
+          }
+          .info {
+            @apply w-[300px] text-white;
+            h3 {
+              @apply mx-auto my-2 text-xl;
+            }
+            p {
+              @apply mx-auto my-0 text-[0.8rem];
+            }
+          }
+        }
+        .locations {
+          @apply absolute -bottom-20 mt-4 text-[0.8rem] font-semibold text-white;
+          span {
+            &:first-child {
+              @apply ml-16;
+            }
+            @apply mx-8 my-0 cursor-pointer transition-all duration-300 ease-in-out hover:rounded hover:bg-blue-500 hover:px-6 hover:py-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes backgroundEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 20%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 20% 40%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
