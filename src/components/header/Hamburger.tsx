@@ -12,37 +12,24 @@ import { StaticImageData } from "next/image";
 type LinkType = {
   title: string;
   url: string;
-};
-
-type CityType = {
-  name: string;
   image: StaticImageData;
 };
 
 type HamburgerProps = {
   state: {
-    initial: any;
     clicked: boolean;
     menuName: string;
   };
 };
 
-const cities: CityType[] = [
-  { name: "Ha Noi", image: HaNoi },
-  { name: "Da Nang", image: DaNang },
-  { name: "Ho Chi Minh", image: HoChiMinh },
-  { name: "Can Tho", image: CanTho },
-  { name: "Kien Giang", image: KienGiang },
-];
-
 const links: LinkType[] = [
-  { title: "About", url: "/about" },
-  { title: "Projects", url: "/project" },
-  { title: "Contact", url: "/contact" },
+  { title: "About", url: "/about", image: HaNoi },
+  { title: "Projects", url: "/project", image: DaNang },
+  { title: "Contact", url: "/contact", image: HoChiMinh },
 ];
 
 const Hamburger = ({ state }: HamburgerProps) => {
-  const { initial, clicked, menuName } = state;
+  const { clicked, menuName } = state;
 
   let menu: any = useRef([]);
   let revealMenu: any = useRef([]);
@@ -127,10 +114,11 @@ const Hamburger = ({ state }: HamburgerProps) => {
   };
 
   const handleCity = (city: StaticImageData) => {
+    console.log(city);
     gsap.to(cityBackground, {
       duration: 0,
       backgroundSize: "+=25% +=25%",
-      background: `url(${city}) center center`,
+      backgroundImage: `url(${city.src})`,
     });
     gsap.to(cityBackground, {
       duration: 0.4,
@@ -139,22 +127,30 @@ const Hamburger = ({ state }: HamburgerProps) => {
     });
   };
 
-  const handleCityReturn = () => {
-    gsap.to(cityBackground, {
-      duration: 0.4,
-      opacity: 0,
-    });
-  };
-
   const handleHoverTitle = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    city: StaticImageData,
   ) => {
+    gsap.to(cityBackground, {
+      duration: 0,
+      backgroundSize: "+=25% +=25%",
+      backgroundImage: `url(${city.src})`,
+    });
+    gsap.to(cityBackground, {
+      duration: 0.4,
+      opacity: 1,
+      ease: "power3.inOut",
+    });
     gsap.to(e.target, { duration: 0.2, y: 3, skewX: 4, ease: "power3:inOut" });
   };
   const handleExitTitle = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     gsap.to(e.target, { duration: 0.2, y: -3, skewX: 0, ease: "power3:inOut" });
+    gsap.to(cityBackground, {
+      duration: 0.4,
+      opacity: 0,
+    });
   };
 
   const LinkList = () => (
@@ -163,7 +159,7 @@ const Hamburger = ({ state }: HamburgerProps) => {
         {links.map((link, index) => (
           <li key={index}>
             <Link
-              onMouseEnter={handleHoverTitle}
+              onMouseEnter={(e) => handleHoverTitle(e, link.image)}
               onMouseOut={handleExitTitle}
               ref={(el) => (title.current[index] = el)}
               href={link.url}
@@ -174,21 +170,6 @@ const Hamburger = ({ state }: HamburgerProps) => {
         ))}
       </ul>
     </nav>
-  );
-
-  const Locations = () => (
-    <div className="locations">
-      Locations:
-      {cities.map((el) => (
-        <span
-          key={el.name}
-          onMouseEnter={() => handleCity(el.image)}
-          onMouseOut={handleCityReturn}
-        >
-          {el.name}
-        </span>
-      ))}
-    </div>
   );
 
   return (
@@ -217,7 +198,6 @@ const Hamburger = ({ state }: HamburgerProps) => {
                   eius odit doloremque!
                 </p>
               </div>
-              <Locations />
             </div>
           </div>
         </div>
