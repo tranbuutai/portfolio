@@ -1,11 +1,6 @@
-import { Provider } from "react-redux";
-import { Canvas } from "@/lib/reactThreeFiber";
-import { Shadow } from "@/lib/reactThreeDrei";
-
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import StarField from "@/components/header/StarField";
 
 export const metadata = {
   icons: { icon: "/favicon.ico" },
@@ -38,20 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <Header />
-        <div className="absolute inset-0 z-0">
-          <Canvas className="h-screen w-screen" style={{ background: "black" }}>
-            <Shadow
-              color="black"
-              colorStop={0}
-              opacity={0.5}
-              fog={false} // Reacts to fog (default=false)
-            />
-            <StarField count={5000} />
-          </Canvas>
-        </div>
-        <main className="relative min-h-screen overflow-hidden">
-          <div className="absolute left-0 top-0 z-10">{children}</div>
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
