@@ -15,9 +15,9 @@ const StarFieldBackGround = (props: Props) => {
           maxPolarAngle={1.45}
           maxDistance={15}
         />
-        <PerspectiveCamera makeDefault fov={30} position={[3, 2, 5]} />
-        {/* args = color */}
-        <color args={[0, 0, 0]} attach="background" />
+        <PerspectiveCamera makeDefault fov={40} position={[3, 2, 5]} />
+        {/* args = color (value between 0 and 1) */}
+        <color args={["#111112"]} attach="background" />
 
         <ambientLight intensity={0.4} />
         <spotLight

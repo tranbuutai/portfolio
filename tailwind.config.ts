@@ -129,10 +129,12 @@ export default {
           800: "#1E293B",
           900: "#0F172A",
         },
+        white: "#F8FBFF",
       },
 
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        montserrat: ["var(--font-montserrat)"],
       },
       boxShadow: {
         base: "0px 0px 1px rgba(40, 41, 61, 0.08), 0px 0.5px 2px rgba(96, 97, 112, 0.16)",

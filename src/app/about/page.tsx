@@ -1,7 +1,7 @@
 import VerticalLoopText from "@/components/home/textLoop";
 import StarFieldBackGround from "@/components/background";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <StarFieldBackGround />

@@ -5,8 +5,6 @@ import Link from "next/link";
 import HaNoi from "@/assets/components/header/ha-noi.jpg";
 import DaNang from "@/assets/components/header/da-nang.jpg";
 import HoChiMinh from "@/assets/components/header/ho-chi-minh.jpg";
-import CanTho from "@/assets/components/header/can-tho.jpg";
-import KienGiang from "@/assets/components/header/kien-giang.webp";
 import { StaticImageData } from "next/image";
 
 type LinkType = {
@@ -24,7 +22,7 @@ type HamburgerProps = {
 
 const links: LinkType[] = [
   { title: "About", url: "/about", image: HaNoi },
-  { title: "Projects", url: "/project", image: DaNang },
+  { title: "Projects", url: "/projects", image: DaNang },
   { title: "Contact", url: "/contact", image: HoChiMinh },
 ];
 

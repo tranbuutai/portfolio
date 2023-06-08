@@ -3,13 +3,15 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import React, { Ref, useRef, useState } from "react";
 import { BufferGeometry, Material, Mesh, Vector3 } from "three";
 
-interface Props {}
+interface BoxProps {
+  color: string;
+}
 
-const Box = ({ color }) => {
+const Box = ({ color }: BoxProps) => {
   const meshRef: Ref<Mesh> = useRef(null);
   const [xRotSpeed] = useState(() => Math.random());
   const [yRotSpeed] = useState(() => Math.random());
-  const [scale] = useState(() => Math.random() * 0.04);
+  const [scale] = useState(() => Math.random() * 0.035);
   const [position] = useState<Vector3 | void>(resetPosition());
 
   function resetPosition() {
@@ -26,7 +28,7 @@ const Box = ({ color }) => {
     }
     return pos;
   }
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     meshRef.current?.position.set(position!.x, position!.y, position!.z);
     meshRef.current!.rotation.x += delta * xRotSpeed;
     meshRef.current!.rotation.y += delta * yRotSpeed;
@@ -40,7 +42,7 @@ const Box = ({ color }) => {
   );
 };
 
-const Boxes = (props: Props) => {
+const Boxes = () => {
   const [arr] = useState<Number[]>(() => {
     let a: Number[] = [];
     for (let i = 0; i < 50; i++) {

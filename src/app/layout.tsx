@@ -1,3 +1,5 @@
+import { Inter, Montserrat, Roboto_Mono } from "next/font/google";
+
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -24,13 +26,19 @@ export const metadata = {
   },
 };
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable}`}>
       <body suppressHydrationWarning={true}>
         <Header />
         <main>{children}</main>

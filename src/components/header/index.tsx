@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import Hamburger from "./Hamburger";
-import Lottie, { AnimationItem } from "lottie-web";
-import animationData from "@/assets/lottie/hamburger-menu-to-x.json";
-import menuIcon from "@/assets/components/header/menu.svg";
 import Image from "next/image";
+import Link from "next/link";
+import Lottie, { AnimationItem } from "lottie-web";
+
+import animationData from "@/assets/lottie/hamburger-menu-to-x.json";
+import Hamburger from "./Hamburger";
+import menuIcon from "@/assets/components/header/menu.svg";
+
 type MenuState = {
   clicked: boolean;
   menuName: string;
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
 
   const [isMenuDisabled, setIsMenuDisabled] = useState<boolean>(false);
   const [hasChild, setHasChild] = useState(false);
-  console.log(hasChild);
+
   useEffect(() => {
     setHasChild(true);
     const loadAnimation = (): (() => void) => {
@@ -92,7 +93,7 @@ const Header: React.FC = () => {
         <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
-              <Link href={""}>Home</Link>
+              <Link href={"/"}>TBT</Link>
             </div>
             <div className="menu">
               <button
