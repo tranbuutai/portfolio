@@ -5,7 +5,7 @@ const VerticalLoopText = () => {
   return (
     <div className="relative z-10 flex h-[90vh] flex-col items-center justify-center text-white">
       <h1 className="mb-12 text-center text-6xl font-bold">
-        Hi! Welcome to My Portfolio
+        Hi! Welcome to My Site
       </h1>
       <div className="flex text-center text-4xl font-bold">
         My name is Tai, and I'm a
