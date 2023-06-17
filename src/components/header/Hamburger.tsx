@@ -159,7 +159,7 @@ const Hamburger = ({ state }: HamburgerProps) => {
             <Link
               onMouseEnter={(e) => handleHoverTitle(e, link.image)}
               onMouseOut={handleExitTitle}
-              ref={(el) => (title.current[index] = el)}
+              ref={(el: any) => (title.current[index] = el)}
               href={link.url}
             >
               {link.title}

@@ -1,4 +1,4 @@
-import { Inter, Montserrat, Roboto_Mono } from "next/font/google";
+import { Inter, Montserrat, Poppins, Roboto_Mono } from "next/font/google";
 
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
@@ -25,11 +25,11 @@ export const metadata = {
     statusBarStyle: "default",
   },
 };
-
-const montserrat = Montserrat({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat",
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable}`}>
+    <html lang="en" className={`${poppins.variable}`}>
       <body suppressHydrationWarning={true}>
         <Header />
         <main>{children}</main>

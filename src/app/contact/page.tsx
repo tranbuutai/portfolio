@@ -1,4 +1,4 @@
-import VerticalLoopText from "@/components/home/textLoop";
+import VerticalLoopText from "@/components/home/hero";
 import StarFieldBackGround from "@/components/background";
 
 export default function Contact() {

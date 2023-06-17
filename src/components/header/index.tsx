@@ -9,6 +9,7 @@ import Lottie, { AnimationItem } from "lottie-web";
 import animationData from "@/assets/lottie/hamburger-menu-to-x.json";
 import Hamburger from "./Hamburger";
 import menuIcon from "@/assets/components/header/menu.svg";
+import logo from "@/assets/icons/logo-with-text.svg";
 
 type MenuState = {
   clicked: boolean;
@@ -93,7 +94,14 @@ const Header: React.FC = () => {
         <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
-              <Link href={"/"}>TBT</Link>
+              <Link href={"/"}>
+                <Image
+                  className="mt-[5px] w-20"
+                  priority
+                  src={logo}
+                  alt="logo"
+                />
+              </Link>
             </div>
             <div className="menu">
               <button

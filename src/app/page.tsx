@@ -1,14 +1,12 @@
-import VerticalLoopText from "@/components/home/textLoop";
-import StarFieldBackGround from "@/components/background";
+import { HomeHero, HomeMyInformation } from "@/components/home";
+import { techSkills } from "@/constants/home";
 
 export default function Home() {
   return (
     <>
-      <StarFieldBackGround />
-      <div className="container relative z-10 rounded-md border border-gray-300">
-        <div className="description">
-          <VerticalLoopText />
-        </div>
+      <HomeHero />
+      <div className="container mx-auto">
+        <HomeMyInformation skills={techSkills} />
       </div>
     </>
   );

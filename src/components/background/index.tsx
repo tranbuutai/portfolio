@@ -1,7 +1,9 @@
 "use client";
+
 import React, { Suspense } from "react";
 import { Canvas } from "@/lib/reactThreeFiber";
 import { OrbitControls, PerspectiveCamera } from "@/lib/reactThreeDrei";
+
 import Boxes from "./boxes";
 
 type Props = {};
