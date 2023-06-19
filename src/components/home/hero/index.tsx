@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
@@ -26,13 +27,13 @@ const HomeHero: React.FC = () => {
       <div className="container relative z-10 max-w-fit font-poppins">
         <div className="relative z-10 flex h-[90vh] flex-col items-center justify-center text-white">
           <h1
-            className="mb-12 text-center text-6xl font-bold opacity-0"
+            className="mb-12 text-center text-6xl font-bold opacity-0 transition-all ease-in-out"
             ref={(el) => (titleRef = el)}
           >
             Hi! Welcome to My Site
           </h1>
           <div
-            className="flex text-center text-4xl font-bold opacity-0"
+            className="flex text-center text-4xl font-bold opacity-0 transition-all ease-in-out"
             ref={(el) => (subtitleRef = el)}
           >
             My name is Tai, and I'm a

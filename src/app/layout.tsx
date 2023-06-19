@@ -3,6 +3,8 @@ import { Inter, Montserrat, Poppins, Roboto_Mono } from "next/font/google";
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata = {
   icons: { icon: "/favicon.ico" },
@@ -41,7 +43,9 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable}`}>
       <body suppressHydrationWarning={true}>
         <Header />
-        <main>{children}</main>
+        <main>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </main>
         <Footer />
       </body>
     </html>
