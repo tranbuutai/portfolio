@@ -89,7 +89,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="relative z-[9999]">
+    <header className="relative z-[100]">
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
