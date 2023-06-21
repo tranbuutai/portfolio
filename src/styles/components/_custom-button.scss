@@ -1,0 +1,83 @@
+.custom-btn {
+  @apply relative inline-block cursor-pointer rounded-md border-none bg-blue-400 bg-transparent to-yellow-500 px-10 py-2 font-medium text-white transition-all duration-300;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+
+  background: linear-gradient(
+    0deg,
+    rgb(81, 206, 255) 0%,
+    rgb(0, 128, 255) 100%
+  );
+
+  span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+  }
+
+  &:before {
+    height: 0%;
+    width: 2px;
+  }
+
+  &:after {
+    width: 0%;
+    height: 2px;
+  }
+
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+    &:before {
+      height: 100%;
+    }
+
+    &:after {
+      width: 100%;
+    }
+    span:last-child:before {
+      height: 100%;
+    }
+
+    span:last-child:after {
+      width: 100%;
+    }
+  }
+
+  span:last-child {
+    @apply absolute inset-0;
+    color: rgba(2, 126, 251, 1);
+  }
+
+  span:last-child:before,
+  span:last-child:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+  }
+
+  span:last-child:before {
+    width: 2px;
+    height: 0%;
+  }
+
+  span:last-child:after {
+    width: 0%;
+    height: 2px;
+  }
+}

@@ -2,7 +2,6 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  mode: "jit",
   darkMode: "class",
   theme: {
     backgroundImage: {
@@ -143,7 +142,6 @@ export default {
         base3: "16px 10px 40px rgba(15, 23, 42, 0.22)",
         deep: "-2px 0px 8px rgba(0, 0, 0, 0.16)",
         dropdown: "0px 4px 8px rgba(0, 0, 0, 0.08)",
-
         testi: "0px 4px 24px rgba(0, 0, 0, 0.06)",
         todo: "rgba(235 233 241, 0.6) 0px 3px 10px 0px",
       },

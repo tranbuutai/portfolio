@@ -1,23 +1,22 @@
 "use client";
-
-import { Icon } from "@iconify/react";
-import Link from "next/link";
-
-import Project, { ProjectProps } from "./project";
+import Project from "./project";
+import { ProjectType } from "@/types/home";
 
 interface IInformation {
-  projects: ProjectProps[];
+  projects: ProjectType[];
 }
 
 const HomeMyWork: React.FC<IInformation> = ({ projects }) => {
-  console.log(projects);
   return (
-    <div className="portfolio">
+    <div className="h-screen">
       <div className="container mx-auto px-4">
-        <h2 className="mb-5 text-4xl font-bold">My Projects</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <h1 className="mb-20 text-center text-3xl font-bold md:text-5xl">
+          My Projects
+        </h1>
+
+        <div className="flex flex-col gap-16">
           {projects.map((project, index) => (
-            <Project key={index} detail={project.detail} />
+            <Project key={index} detail={project.detail} number={index + 1} />
           ))}
         </div>
       </div>
