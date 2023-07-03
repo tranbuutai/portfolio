@@ -1,0 +1,30 @@
+h1 {
+  @apply text-4xl sm:text-5xl md:text-6xl 3xl:text-7xl;
+}
+
+h2 {
+  @apply text-3xl sm:text-4xl md:text-5xl 3xl:text-6xl;
+}
+
+h3 {
+  @apply text-2xl sm:text-3xl md:text-4xl 3xl:text-5xl;
+}
+
+h4 {
+  @apply text-xl sm:text-2xl md:text-3xl 3xl:text-4xl;
+}
+
+h5 {
+  @apply text-lg sm:text-xl md:text-2xl 3xl:text-3xl;
+}
+
+h6 {
+  @apply text-base sm:text-lg md:text-xl 3xl:text-2xl;
+}
+
+p,
+li,
+b,
+i {
+  @apply text-xs sm:text-sm md:text-base 3xl:text-lg;
+}

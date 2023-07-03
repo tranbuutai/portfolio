@@ -10,9 +10,7 @@ const HomeMyWork: React.FC<IInformation> = ({ projects }) => {
   return (
     <div className="h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="mb-20 text-center text-3xl font-bold md:text-5xl">
-          My Projects
-        </h1>
+        <h1 className="mb-20 text-center font-bold md:text-5xl">My Projects</h1>
 
         <div className="flex flex-col gap-16">
           {projects.map((project, index) => (

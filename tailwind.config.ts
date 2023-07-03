@@ -4,6 +4,14 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "992px",
+      xl: "1280px",
+      "2xl": "1440px",
+      "3xl": "2000px",
+    },
     backgroundImage: {
       "split-white-cloud": "linear-gradient(to top, #F3F4F6 50% , white 50%)",
     },
@@ -21,13 +29,12 @@ export default {
         "2xl": "0",
       },
       screens: {
-        "2sm": "480px",
-        sm: "640px",
+        sm: "480px",
         md: "768px",
-        lg: "1024px",
-        xl: "1280px",
+        lg: "992px",
+        xl: "992px",
         "2xl": "1280px",
-        "3xl": "2000px",
+        "3xl": "1440px",
       },
     },
     extend: {
@@ -130,7 +137,6 @@ export default {
         },
         white: "#F8FBFF",
       },
-
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         poppins: ["var(--font-poppins)"],

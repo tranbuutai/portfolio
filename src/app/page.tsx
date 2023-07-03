@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { HomeHero, HomeMyInformation, HomeMyWork } from "@/components/home";
 import { projects, techSkills } from "@/constants/home";
 import Loading from "./loading";
+import HomeContactInformation from "@/components/home/contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ export default function Home() {
       <div className="container mx-auto">
         <HomeMyInformation skills={techSkills} />
         <HomeMyWork projects={projects} />
+        <HomeContactInformation />
       </div>
     </>
   );

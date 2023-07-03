@@ -27,23 +27,33 @@ const HomeHero: React.FC = () => {
       <div className="container relative z-10 max-w-fit font-poppins">
         <div className="relative z-10 flex h-[90vh] flex-col items-center justify-center text-white">
           <h1
-            className="mb-12 text-center text-6xl font-bold opacity-0 transition-all ease-in-out"
+            className="mb-12 text-center font-bold opacity-0 transition-all ease-in-out"
             ref={(el) => (titleRef = el)}
           >
             Hi! Welcome to My Site
           </h1>
           <div
-            className="flex text-center text-4xl font-bold opacity-0 transition-all ease-in-out"
+            className="flex text-center text-2xl font-bold opacity-0 transition-all ease-in-out sm:text-3xl md:text-4xl 3xl:text-5xl"
             ref={(el) => (subtitleRef = el)}
           >
             My name is Tai, and I'm a
             <div className="text-animation">
               <ul>
-                <li className="text-[#ea4335]">Coder.</li>
-                <li className="text-[#4285f4]">Gamer.</li>
-                <li className="text-[#fbbc04]">Engineer.</li>
-                <li className="text-[#4285f4]">Builder.</li>
-                <li className="text-[#ea4335]">Coder.</li>
+                <li className="text-2xl text-[#ea4335] sm:text-3xl md:text-4xl 3xl:text-5xl">
+                  Coder.
+                </li>
+                <li className="text-2xl text-[#4285f4] sm:text-3xl md:text-4xl 3xl:text-5xl">
+                  Gamer.
+                </li>
+                <li className="text-2xl text-[#fbbc04] sm:text-3xl md:text-4xl 3xl:text-5xl">
+                  Engineer.
+                </li>
+                <li className="text-2xl text-[#4285f4] sm:text-3xl md:text-4xl 3xl:text-5xl">
+                  Builder.
+                </li>
+                <li className="text-2xl text-[#ea4335] sm:text-3xl md:text-4xl 3xl:text-5xl">
+                  Coder.
+                </li>
               </ul>
             </div>
           </div>
