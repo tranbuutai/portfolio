@@ -12,6 +12,7 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ detail, number }) => {
   const { title, description, image, anotherImage, link } = detail;
+  const isViewed = useRef(false);
   const projectRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const hoverImageRef = useRef<HTMLImageElement>(null);
@@ -22,7 +23,10 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
   );
 
   useEffect(() => {
+    if (!projectRef.current) return;
+
     const animateOnIntersection = ([entry]: IntersectionObserverEntry[]) => {
+      if (isViewed.current) return;
       if (entry.isIntersecting) {
         gsap.fromTo(
           projectRef.current,
@@ -40,6 +44,7 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
             ease: "power3.inOut",
           },
         );
+        isViewed.current = true;
       }
     };
 
