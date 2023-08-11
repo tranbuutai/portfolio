@@ -78,7 +78,9 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
         className="flex items-center justify-center gap-4 text-lg font-semibold"
       >
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
-        Check on my About page for more information about me.
+        <p className="text-center text-lg font-semibold">
+          Check on my About page for more information about me.
+        </p>
         <Icon icon="fxemoji:left" className="animate-x-bounce-right" />
       </Link>
     </div>

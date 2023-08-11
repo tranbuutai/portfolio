@@ -1,5 +1,3 @@
-"use client";
-
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import React from "react";
@@ -10,74 +8,55 @@ const HomeContactInformation: React.FC<HomeContactInformation> = () => {
   return (
     <div
       id="home-my-information"
-      className="h-screen md:flex md:flex-col md:items-center md:justify-center md:gap-28 md:space-x-6"
+      className="flex h-screen flex-col items-center justify-center gap-16 md:gap-28"
     >
-      <h1 className="text-center font-bold">Contact</h1>
-      <div className="gap-6 md:flex md:items-center md:justify-between md:space-x-6">
-        <div className="md:w-2/3">
-          <h2 className="mb-2 font-semibold">Contact</h2>
+      <h2 className="text-center font-bold">Contact</h2>
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between lg:gap-6">
+        <div className="p-0 py-2 text-center md:py-4 lg:pr-6">
+          <h4 className="mb-3 font-semibold">My Email</h4>
           <p>
-            LinkedIn:{" "}
             <Link
-              className="font-semibold"
-              href="/www.linkedin.com/in/tranbuutai"
-            >
-              in/tranbuutai
-            </Link>
-          </p>
-          <p>
-            Email:{" "}
-            <Link
-              className="font-semibold"
+              className="font-semibold text-white"
               href="mailto:tranbuutai80@gmail.com"
             >
-              tranbuutai80@gmail.com
-            </Link>
-          </p>
-          <p>
-            Phone:{" "}
-            <Link className="font-semibold" href="tel:+84853047874">
-              +84853047874
+              <p className="transition-transform hover:scale-110">
+                tranbuutai80@gmail.com
+              </p>
             </Link>
           </p>
         </div>
-
-        <div className="space-y-4 md:w-1/3">
-          <div>
-            <h4 className="mb-1 font-semibold">Contact</h4>
-            <p>
-              LinkedIn:{" "}
-              <Link
-                className="font-semibold"
-                href="/www.linkedin.com/in/tranbuutai"
-              >
-                in/tranbuutai
-              </Link>
-            </p>
-            <p>
-              Email:{" "}
-              <Link
-                className="font-semibold"
-                href="mailto:tranbuutai80@gmail.com"
-              >
-                tranbuutai80@gmail.com
-              </Link>
-            </p>
-            <p>
-              Phone:{" "}
-              <Link className="font-semibold" href="tel:+84853047874">
+        <div className="m-auto w-1/3 border-b border-gray-300 md:h-full md:w-auto md:border-b-0 md:border-r-2" />
+        <div className="p-0 py-2 text-center  md:py-4 lg:px-6">
+          <h4 className="mb-3 font-semibold">My Phone Number</h4>
+          <p>
+            <Link className="font-semibold text-white" href="tel:+84853047874">
+              <p className="transition-transform hover:scale-110">
                 +84853047874
-              </Link>
-            </p>
-          </div>
+              </p>
+            </Link>
+          </p>
+        </div>
+        <div className="m-auto w-1/3 border-b border-gray-300 md:h-full md:w-auto md:border-b-0 md:border-r-2" />
+        <div className="p-0 py-2 text-center md:py-4 lg:pl-6">
+          <h4 className="mb-3 font-semibold ">My LinkedIn</h4>
+          <p>
+            <Link
+              className="font-semibold text-white"
+              href="https://www.linkedin.com/in/tranbuutai/"
+              target="_blank"
+            >
+              <p className="transition-transform hover:scale-110">
+                in/tranbuutai
+              </p>
+            </Link>
+          </p>
         </div>
       </div>
-      <Link
-        href="/about"
-        className="flex items-center justify-center gap-4 text-lg font-semibold"
-      >
+      <Link href="/about" className="flex items-center justify-center gap-4 ">
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
-        Check on my About page for more information about me.
+        <p className="text-center text-lg font-semibold">
+          Check on my About page for more information about me.
+        </p>
         <Icon icon="fxemoji:left" className="animate-x-bounce-right" />
       </Link>
     </div>
