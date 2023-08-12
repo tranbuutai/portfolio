@@ -51,14 +51,7 @@ const HomeContactInformation: React.FC<HomeContactInformation> = () => {
             </Link>
           </p>
         </div>
-      </div>
-      <Link href="/about" className="flex items-center justify-center gap-4 ">
-        <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
-        <p className="text-center text-lg font-semibold">
-          Check on my About page for more information about me.
-        </p>
-        <Icon icon="fxemoji:left" className="animate-x-bounce-right" />
-      </Link>
+      </div>      
     </div>
   );
 };
