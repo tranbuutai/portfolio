@@ -124,10 +124,10 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
           />
         </div>
       </Link>
-      <div className="w-2/5 ">
+      <div className="w-2/5">
         <div className="py-4">
           <div className="mb-2 text-xl font-bold">{title}</div>
-          <p className="text-base ">{description}</p>
+          <p className="text-base">{description}</p>
         </div>
         <Button>
           <Link href={link} className="">
