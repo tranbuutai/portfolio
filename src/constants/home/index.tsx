@@ -5,8 +5,8 @@ import { ProjectType } from "@/types/home";
 export const techSkills = [
   "TypeScript",
   "JavaScript",
-  "React",
-  "Nodejs",
+  "ReactJs",
+  "NodeJs",
   "Webflow",
   "Ghost CMS",
 ];
