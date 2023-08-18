@@ -15,7 +15,8 @@ export const projects: ProjectType[] = [
   {
     detail: {
       title: "Cat Manga",
-      description: "text",
+      description:
+        "This project aims to build a website for users who wish to read manga or comics online.",
       image: catManga.src,
       anotherImage: catMangaDark.src,
       link: "https://comic-web-fe.vercel.app/",
