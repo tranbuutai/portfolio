@@ -11,7 +11,7 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({ detail, number }) => {
-  const { title, description, image, anotherImage, link } = detail;
+  const { title, description, image, anotherImage, techStack, link } = detail;
   const isViewed = useRef(false);
   const projectRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -127,7 +127,8 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
       <div className="w-2/5">
         <div className="py-4">
           <div className="mb-2 text-xl font-bold">{title}</div>
-          <p className="text-base">{description}</p>
+          {description && <p className="mb-2 text-base">{description}</p>}
+          {techStack && <p className="text-base">{techStack}</p>}
         </div>
         <Button>
           <Link href={link} className="">

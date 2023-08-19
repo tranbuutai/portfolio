@@ -6,5 +6,6 @@ export type DetailProjectType = {
   description: string;
   image: string;
   anotherImage?: string;
+  techStack?: string;
   link: any;
 };
