@@ -1,7 +1,18 @@
 export default function Loading() {
+  const text = "Loading...";
+
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black-500 text-white">
-      <p>Loading...</p>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black-500 text-3xl text-white">
+      <p className="animate-bounce-letters space-x-1 uppercase">
+        {text.split("").map((char, index) => (
+          <span
+            key={index}
+            style={{ "--loading-letter-index": index } as React.CSSProperties}
+          >
+            {char}
+          </span>
+        ))}
+      </p>
     </div>
   );
 }

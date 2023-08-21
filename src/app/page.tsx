@@ -1,10 +1,15 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-import { HomeHero, HomeMyInformation, HomeMyWork } from "@/components/home";
+import {
+  HomeContactInformation,
+  HomeExperience,
+  HomeHero,
+  HomeMyInformation,
+  HomeMyWork,
+} from "@/components/home";
 import { projects, techSkills } from "@/constants/home";
 import Loading from "./loading";
-import HomeContactInformation from "@/components/home/contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +27,7 @@ export default function Home() {
       <HomeHero />
       <div className="container mx-auto">
         <HomeMyInformation skills={techSkills} />
+        <HomeExperience />
         <HomeMyWork projects={projects} />
         <HomeContactInformation />
       </div>
