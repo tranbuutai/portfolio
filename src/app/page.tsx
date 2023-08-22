@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 
 import {
@@ -8,7 +9,7 @@ import {
   HomeMyInformation,
   HomeMyWork,
 } from "@/components/home";
-import { projects, techSkills } from "@/constants/home";
+import { experiences, projects, techSkills } from "@/constants/home";
 import Loading from "./loading";
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
       <HomeHero />
       <div className="container mx-auto">
         <HomeMyInformation skills={techSkills} />
-        <HomeExperience />
+        <HomeExperience experiences={experiences} />
         <HomeMyWork projects={projects} />
         <HomeContactInformation />
       </div>
