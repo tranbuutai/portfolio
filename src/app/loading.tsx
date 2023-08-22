@@ -3,7 +3,7 @@ export default function Loading() {
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black-500 text-3xl text-white">
-      <p className="animate-bounce-letters space-x-1 uppercase">
+      <p className="animate-loading-bounce-letters space-x-1 uppercase">
         {text.split("").map((char, index) => (
           <span
             key={index}
