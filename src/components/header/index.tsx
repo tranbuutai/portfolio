@@ -123,7 +123,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <Hamburger state={menuState} />
+      <Hamburger state={menuState} handleClickMenu={handleClickMenu} />
     </header>
   );
 };

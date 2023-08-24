@@ -13,9 +13,10 @@ const StarFieldBackGround = (props: Props) => {
     return (
       <>
         <OrbitControls
-          target={[0, 0.35, 0]}
+          target={[0, 0.5, 0]}
           maxPolarAngle={1.45}
           maxDistance={15}
+          enableZoom={false}
         />
         <PerspectiveCamera makeDefault fov={40} position={[3, 2, 5]} />
         {/* args = color (value between 0 and 1) */}

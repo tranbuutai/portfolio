@@ -18,15 +18,16 @@ type HamburgerProps = {
     clicked: boolean;
     menuName: string;
   };
+  handleClickMenu: () => void;
 };
 
 const links: LinkType[] = [
-  { title: "About", url: "/about", image: HaNoi },
-  { title: "Projects", url: "/projects", image: DaNang },
-  { title: "Contact", url: "/contact", image: HoChiMinh },
+  { title: "About", url: "#home-my-information", image: HaNoi },
+  { title: "Projects", url: "#home-my-projects", image: DaNang },
+  { title: "Contact", url: "#home-my-contact", image: HoChiMinh },
 ];
 
-const Hamburger = ({ state }: HamburgerProps) => {
+const Hamburger = ({ state, handleClickMenu }: HamburgerProps) => {
   const { clicked, menuName } = state;
 
   let menu: any = useRef([]);
@@ -161,6 +162,7 @@ const Hamburger = ({ state }: HamburgerProps) => {
               onMouseOut={handleExitTitle}
               ref={(el: any) => (title.current[index] = el)}
               href={link.url}
+              onClick={handleClickMenu}
             >
               {link.title}
             </Link>
@@ -175,7 +177,7 @@ const Hamburger = ({ state }: HamburgerProps) => {
       <div
         ref={(el) => (revealMenuBackground = el)}
         className="menu-secondary-background-color"
-      ></div>
+      />
       <div ref={(el) => (revealMenu = el)} className="menu-layer">
         <div
           ref={(el) => (cityBackground = el)}

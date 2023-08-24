@@ -1,14 +1,8 @@
 .custom-btn {
-  @apply relative inline-block cursor-pointer rounded-md border-none bg-blue-400 bg-transparent to-yellow-500 px-7 py-2 font-medium text-white transition-all duration-300 md:px-10;
+  @apply relative inline-block cursor-pointer rounded-sm border-none bg-blue-500 px-7 py-2 font-medium text-white transition-all duration-300 md:px-10;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
-
-  background: linear-gradient(
-    0deg,
-    rgb(81, 206, 255) 0%,
-    rgb(0, 128, 255) 100%
-  );
 
   span {
     position: relative;
@@ -58,6 +52,7 @@
 
   span:last-child {
     @apply absolute inset-0;
+    border-radius: 0.375rem /* 6px */;
     color: rgba(2, 126, 251, 1);
   }
 
@@ -69,6 +64,7 @@
     bottom: 0;
     background: rgba(2, 126, 251, 1);
     transition: all 0.3s ease;
+    border-radius: 0.375rem /* 6px */;
   }
 
   span:last-child:before {

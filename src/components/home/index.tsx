@@ -2,7 +2,7 @@ import HomeMyInformation from "./information";
 import HomeHero from "./hero";
 import HomeMyWork from "./work";
 import HomeContactInformation from "./contact";
-import HomeExperience from "./experience";
+import HomeExperience from "./experiences";
 
 export {
   HomeHero,

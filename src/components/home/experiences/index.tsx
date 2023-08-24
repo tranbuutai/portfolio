@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { ExperienceType } from "@/types/home";
+import classNames from "classnames";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,43 +63,59 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
       stagger: { amount: 0.2 },
     });
   };
+  const ExperienceImage = (image: string, index: number) => {
+    const isOddIndex = (index + 1) % 2 !== 0;
 
-  const ExperienceImage = (image: string, index: number) => (
-    <div className="w-full max-w-[50%] p-0 py-2 md:py-4 lg:pr-6">
-      <div className="relative m-auto flex w-1/2 justify-center">
-        <Image
-          src={image}
-          alt={image}
-          width={300}
-          height={300}
-          loading="eager"
-        />
-        <div
-          className={`experience-image-cover-${index} absolute inset-0 z-10 bg-black-500`}
-          ref={(el) => (imageCovers[index] = el)}
-        ></div>
+    const imageContainerClasses = classNames(
+      "relative m-auto flex w-1/2",
+      isOddIndex ? "md:mr-0" : "justify-start md:m-0",
+    );
+
+    return (
+      <div className="w-full max-w-[50%] p-0 py-2 md:py-4 lg:px-6">
+        <div className={imageContainerClasses}>
+          <Image
+            src={image}
+            alt={image}
+            width={350}
+            height={350}
+            loading="eager"
+          />
+          <div
+            className={`experience-image-cover-${index} absolute inset-0 z-10 bg-black-500`}
+            ref={(el) => (imageCovers[index] = el)}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const ExperienceContent = (
     name: string,
     title: string,
     time: string,
     index: number,
-  ) => (
-    <div className="w-full max-w-[50%] p-0 py-2  md:py-4 lg:px-6">
-      <div
-        className={`experience-content-wrapper-${index} relative m-auto flex flex-col items-center space-y-2`}
-      >
-        <h5 className="font-semibold" ref={(el) => (words[3 * index] = el)}>
-          {name}
-        </h5>
-        <p ref={(el) => (words[3 * index + 1] = el)}>{title}</p>
-        <p ref={(el) => (words[3 * index + 2] = el)}>{time}</p>
+  ) => {
+    const isOddIndex = (index + 1) % 2 !== 0;
+
+    const contentWrapperClasses = classNames(
+      "relative m-auto flex flex-col space-y-2",
+      `experience-content-wrapper-${index}`,
+      { "text-start": isOddIndex, "text-end": !isOddIndex },
+    );
+
+    return (
+      <div className="w-full max-w-[50%] p-0 py-2  md:py-4 lg:px-6">
+        <div className={contentWrapperClasses}>
+          <h4 ref={(el) => (words[3 * index] = el)} className="font-semibold">
+            {name}
+          </h4>
+          <p ref={(el) => (words[3 * index + 1] = el)}>{title}</p>
+          <p ref={(el) => (words[3 * index + 2] = el)}>{time}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderExperiences = (experience: ExperienceType, index: number) => {
     const { name, title, image, time } = experience;
@@ -108,7 +125,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
       <div
         className={`experience-contain-${
           index + 1
-        } mb-8 flex items-center justify-between gap-4 lg:gap-6`}
+        } mb-8 flex items-center justify-between gap-4 lg:gap-0`}
         key={index}
       >
         {isOddIndex ? (
