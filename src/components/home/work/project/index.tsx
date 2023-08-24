@@ -102,7 +102,7 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
     <div ref={projectRef} className={projectWrapperClassName}>
       <Link href={link} className="md:w-1/2 ">
         <div
-          className="relative transform cursor-pointer overflow-hidden rounded shadow-lg transition-all duration-300 hover:scale-105"
+          className="relative transform cursor-pointer overflow-hidden rounded shadow-sm shadow-black-700  transition-all duration-300 hover:scale-105"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
