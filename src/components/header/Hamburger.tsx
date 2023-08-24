@@ -187,14 +187,8 @@ const Hamburger = ({ state }: HamburgerProps) => {
               <LinkList />
 
               <div ref={(el) => (info = el)} className="info">
-                <h3>Our Promise</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                  dicta facere libero sit soluta velit consequatur? Nihil veniam
-                  laboriosam repudiandae, fugiat rem non ipsa a? Amet officiis
-                  aliquid voluptatem sint nam, neque harum optio quasi. Dolores
-                  eius odit doloremque!
-                </p>
+                <h3></h3>
+                <p></p>
               </div>
             </div>
           </div>

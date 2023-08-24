@@ -18,8 +18,9 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
   const hoverImageRef = useRef<HTMLImageElement>(null);
 
   const projectWrapperClassName = classNames(
-    "flex flex-col md:flex-row w-full justify-between gap-4 opacity-0",
-    { "flex-row-reverse": (number + 1) % 2 !== 0 },
+    "flex flex-col w-full justify-between gap-4 opacity-0",
+    { "md:flex-row": (number + 1) % 2 !== 0 },
+    { "md:flex-row-reverse": (number + 1) % 2 === 0 },
   );
 
   useEffect(() => {

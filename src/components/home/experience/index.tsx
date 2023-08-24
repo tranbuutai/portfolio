@@ -108,7 +108,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
       <div
         className={`experience-contain-${
           index + 1
-        } mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between lg:gap-6`}
+        } mb-8 flex items-center justify-between gap-4 lg:gap-6`}
         key={index}
       >
         {isOddIndex ? (
@@ -134,7 +134,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
       <h2 className="text-center font-bold">My Experiences</h2>
       <div className="relative w-full">
         <div className="absolute inset-0 m-auto flex justify-center">
-          <span className="h-full border-b border-gray-300 md:h-full md:w-auto md:border-b-0 md:border-r-2" />
+          <span className="h-full w-auto border-r-2 border-gray-300" />
         </div>
         {experiences.map((experience, index) =>
           renderExperiences(experience, index),

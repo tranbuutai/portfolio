@@ -1,5 +1,5 @@
 export default function Loading() {
-  const text = "Loading...";
+  const text = "Please wait for a little bit for my present.";
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black-500 text-3xl text-white">
