@@ -128,13 +128,11 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
         <div className="py-4">
           <div className="mb-2 text-xl font-bold">{title}</div>
           {description && <p className="mb-2 text-base">{description}</p>}
-          {techStack && <p className="text-base">{techStack}</p>}
+          {techStack && <p className="text-base">Technologies: {techStack}</p>}
         </div>
-        <Button>
-          <Link href={link} className="">
-            View Project
-          </Link>
-        </Button>
+        <Link href={link} className="" target="_blank">
+          <Button>View Project</Button>
+        </Link>
       </div>
     </div>
   );

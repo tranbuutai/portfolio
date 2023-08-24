@@ -17,7 +17,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
       <h1 className="text-center font-bold">About Me</h1>
       <div className="gap-6 md:flex md:items-start md:justify-between md:space-x-6">
         <div className="md:w-2/3">
-          <h2 className="mb-2  font-semibold">Tran Buu Tai (Tom)</h2>
+          <h2 className="mb-2  font-semibold">Tran Buu Tai (Tom Tran)</h2>
           <h3 className="mb-2 font-semibold">Software Engineer</h3>
           <p className="mb-2">
             Hello, I'm Trần Bửu Tài, also known as Tom Tran, a dedicated

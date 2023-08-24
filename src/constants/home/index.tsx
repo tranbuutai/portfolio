@@ -2,6 +2,8 @@ import { ExperienceType, ProjectType } from "@/types/home";
 
 import catManga from "@/assets/components/pages/home/projects/cat-manga.png";
 import catMangaDark from "@/assets/components/pages/home/projects/cat-manga-dark.png";
+import portfolio from "@/assets/components/pages/home/projects/portfolio.png";
+
 import CTUT from "@/assets/components/pages/home/experience/dai-hoc-ky-thuat-cong-nghe-can-tho.jpg";
 import Biwoco from "@/assets/components/pages/home/experience/Logo-Biwoco.png";
 import CredShare from "@/assets/components/pages/home/experience/Logo-CredShare.jpg";
@@ -22,21 +24,23 @@ export const techSkills = [
 export const projects: ProjectType[] = [
   {
     detail: {
-      title: "Cat Manga",
+      title: "Portfolio",
       description:
-        "This project aims to build a website for users who wish to read manga or comics online.",
-      image: catManga.src,
-      anotherImage: catMangaDark.src,
-      techStack: "TypeScript, NextJs, TailwindCSS, Vercel, NestJs, FireStore",
-      link: "https://comic-web-fe.vercel.app/",
+        "My portfolio project introduces myself in a way that makes it easy for others to understand who I am.",
+      image: portfolio.src,
+      anotherImage: portfolio.src,
+      link: "/",
+      techStack: "TypeScript, NextJs 13, TailwindCSS, GSAP, Vercel.",
     },
   },
   {
     detail: {
       title: "Cat Manga",
-      description: "text",
+      description:
+        "This project aims to build a website for users who wish to read manga or comics online.",
       image: catManga.src,
       anotherImage: catMangaDark.src,
+      techStack: "TypeScript, NextJs, TailwindCSS, Vercel, NestJs, FireStore.",
       link: "https://comic-web-fe.vercel.app/",
     },
   },
