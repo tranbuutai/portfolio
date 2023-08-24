@@ -12,9 +12,9 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
   return (
     <div
       id="home-my-information"
-      className="h-screen md:flex md:flex-col md:items-center md:justify-center md:gap-28 md:space-x-6"
+      className="min-h-screen md:flex md:flex-col md:items-center md:justify-center md:gap-28 md:space-x-6"
     >
-      <h1 className="text-center font-bold">About Me</h1>
+      <h1 className="mb-5 text-center font-bold">About Me</h1>
       <div className="gap-6 md:flex md:items-start md:justify-between md:space-x-6">
         <div className="md:w-2/3">
           <h2 className="mb-2  font-semibold">Tran Buu Tai (Tom Tran)</h2>
@@ -75,10 +75,10 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
       </div>
       <Link
         href="/about"
-        className="flex items-center justify-center gap-4 text-lg font-semibold"
+        className="mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
       >
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
-        <p className="text-center text-lg font-semibold">
+        <p className="text-center font-semibold md:text-lg">
           Check on my About page for more information about me.
         </p>
         <Icon icon="fxemoji:left" className="animate-x-bounce-right" />

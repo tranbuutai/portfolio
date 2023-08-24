@@ -18,7 +18,7 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
   const hoverImageRef = useRef<HTMLImageElement>(null);
 
   const projectWrapperClassName = classNames(
-    "flex w-full justify-between gap-4 opacity-0",
+    "flex flex-col md:flex-row w-full justify-between gap-4 opacity-0",
     { "flex-row-reverse": (number + 1) % 2 !== 0 },
   );
 
@@ -99,7 +99,7 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
 
   return (
     <div ref={projectRef} className={projectWrapperClassName}>
-      <Link href={link} className="w-1/2 ">
+      <Link href={link} className="md:w-1/2 ">
         <div
           className="relative transform cursor-pointer overflow-hidden rounded shadow-lg transition-all duration-300 hover:scale-105"
           onMouseEnter={handleMouseEnter}
@@ -124,15 +124,17 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
           />
         </div>
       </Link>
-      <div className="w-2/5">
+      <div className="md:w-2/5">
         <div className="py-4">
           <div className="mb-2 text-xl font-bold">{title}</div>
           {description && <p className="mb-2 text-base">{description}</p>}
           {techStack && <p className="text-base">Technologies: {techStack}</p>}
         </div>
-        <Link href={link} className="" target="_blank">
-          <Button>View Project</Button>
-        </Link>
+        <div className="m-auto flex justify-center md:m-0 md:block">
+          <Link href={link} target="_blank">
+            <Button>View Project</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-      <div className="container mx-auto space-y-8 md:space-y-14">
+      <div className="container mx-auto space-y-8 md:space-y-16">
         <HomeMyInformation skills={techSkills} />
         <HomeExperience experiences={experiences} />
         <HomeMyWork projects={projects} />
