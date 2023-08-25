@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable}`}>
       <body suppressHydrationWarning={true}>
         <Header />
-        <main>
+        <main className="mt-20">
           <Suspense fallback={<Loading />}>{children}</Suspense>
         </main>
         <Footer />

@@ -113,7 +113,6 @@ const Hamburger = ({ state, handleClickMenu }: HamburgerProps) => {
   };
 
   const handleCity = (city: StaticImageData) => {
-    console.log(city);
     gsap.to(cityBackground, {
       duration: 0,
       backgroundSize: "+=25% +=25%",

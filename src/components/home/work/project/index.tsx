@@ -127,7 +127,7 @@ const Project: React.FC<ProjectProps> = ({ detail, number }) => {
       </Link>
       <div className="md:w-2/5">
         <div className="py-4">
-          <div className="mb-2 text-xl font-bold">{title}</div>
+          <h4 className="font-semibold">{title}</h4>
           {description && <p className="mb-2 text-base">{description}</p>}
           {techStack && <p className="text-base">Technologies: {techStack}</p>}
         </div>

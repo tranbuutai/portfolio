@@ -63,6 +63,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
       stagger: { amount: 0.2 },
     });
   };
+
   const ExperienceImage = (image: string, index: number) => {
     const isOddIndex = (index + 1) % 2 !== 0;
 

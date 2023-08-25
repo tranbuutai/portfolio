@@ -1,14 +1,45 @@
 "use client";
 
+import { gsap } from "gsap";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
+import { useScrollAnimation } from "@/hooks";
 interface IInformation {
   skills: string[];
 }
 
 const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
+  let information: any = Array.from({ length: 3 }, () => useRef(null));
+  let sideContentRef: any = useRef([]);
+
+  const scrollAnimation = (
+    selector: any,
+    scrollTrigger: gsap.DOMTarget | ScrollTrigger.Vars,
+    delay?: number,
+  ) => {
+    useScrollAnimation({ selector, scrollTrigger, delay });
+  };
+
+  useEffect(() => {
+    information.forEach((informationItem: any, index: number) => {
+      const ctx = gsap.context(() => {
+        scrollAnimation(informationItem, ".my-information-" + index);
+      });
+
+      return () => ctx.revert(); // <-- CLEANUP!
+    });
+  }, []);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      scrollAnimation(sideContentRef, ".my-information-side-content", 0.8);
+    });
+
+    return () => ctx.revert(); // <-- CLEANUP!
+  }, []);
+
   return (
     <div
       id="home-my-information"
@@ -17,9 +48,22 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
       <h1 className="mb-5 text-center font-bold">About Me</h1>
       <div className="gap-6 md:flex md:items-start md:justify-between md:space-x-6">
         <div className="md:w-2/3">
-          <h2 className="mb-2  font-semibold">Tran Buu Tai (Tom Tran)</h2>
-          <h3 className="mb-2 font-semibold">Software Engineer</h3>
-          <p className="mb-2">
+          <h2
+            className="my-information-0 mb-2  font-semibold"
+            ref={(el) => (information[0] = el)}
+          >
+            Tran Buu Tai (Tom Tran)
+          </h2>
+          <h3
+            className="my-information-1 mb-2 font-semibold"
+            ref={(el) => (information[1] = el)}
+          >
+            Software Engineer
+          </h3>
+          <p
+            className="my-information-2 mb-2"
+            ref={(el) => (information[2] = el)}
+          >
             Hello, I'm Trần Bửu Tài, also known as Tom Tran, a dedicated
             Software Engineer based in Can Tho, Vietnam. With over two years of
             professional experience, I've honed my skills in front-end
@@ -34,7 +78,10 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
           </p>
         </div>
 
-        <div className="space-y-4 md:w-1/3">
+        <div
+          className="my-information-side-content space-y-4 md:w-1/3"
+          ref={(el) => (sideContentRef = el)}
+        >
           <div>
             <h4 className="mb-1 font-semibold">Skills</h4>
             <ul className="list-disc pl-5">
@@ -47,10 +94,21 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
           <div>
             <h4 className="mb-1 font-semibold">Contact</h4>
             <p>
+              GitHub:{" "}
+              <Link
+                className="font-semibold"
+                href="https://github.com/tranbuutai"
+                target="_blank"
+              >
+                github.com/tranbuutai
+              </Link>
+            </p>
+            <p>
               LinkedIn:{" "}
               <Link
                 className="font-semibold"
-                href="/www.linkedin.com/in/tranbuutai"
+                href="www.linkedin.com/in/tranbuutai"
+                target="_blank"
               >
                 in/tranbuutai
               </Link>
@@ -75,7 +133,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
       </div>
       <Link
         href="https://www.topcv.vn/xem-cv/VwlSBwFYBVANAw1SBl0PAABRAAFQUw0ABQ5TXA1e82"
-        className="mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
+        className="information-animated-text mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
         target="_blank"
       >
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
