@@ -53,7 +53,7 @@ const Box = ({ color }: { color: string }) => {
 const Boxes = () => {
   return (
     <>
-      {Array.from({ length: 100 }, (_, i) => (
+      {Array.from({ length: 70 }, (_, i) => (
         <Box key={i} color={colors[i % colors.length]} />
       ))}
     </>
