@@ -1,10 +1,11 @@
+import { Suspense } from "react";
 import { Inter, Montserrat, Poppins, Roboto_Mono } from "next/font/google";
 
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { Suspense } from "react";
 import Loading from "./loading";
+import GoogleAnalytics from "@/components/googleAnalytics";
 
 export const metadata = {
   icons: { icon: "/favicon.ico" },
@@ -33,6 +34,7 @@ export const metadata = {
     google: "z_ZYExyHvFREUPcLlizvdD8Krq9rfcMf-wQ2rUphn6Q",
   },
 };
+
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -48,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body suppressHydrationWarning={true}>
+        <GoogleAnalytics GA_TRACKING_ID={"G-CJLF5JMDP8"} />
         <Header />
         <main className="mt-20">
           <Suspense fallback={<Loading />}>{children}</Suspense>
