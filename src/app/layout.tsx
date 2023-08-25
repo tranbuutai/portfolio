@@ -29,6 +29,9 @@ export const metadata = {
     title: "ChatGPT Next Web",
     statusBarStyle: "default",
   },
+  verification: {
+    google: "z_ZYExyHvFREUPcLlizvdD8Krq9rfcMf-wQ2rUphn6Q",
+  },
 };
 const poppins = Poppins({
   subsets: ["latin"],
