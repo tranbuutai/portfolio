@@ -47,7 +47,7 @@ header {
             ul {
               @apply m-0 p-0;
               li {
-                @apply relative h-32 w-[400px] overflow-hidden text-8xl font-bold;
+                @apply relative h-32 w-[400px] overflow-hidden text-3xl font-bold sm:text-4xl md:text-5xl xl:text-8xl;
                 a {
                   @apply absolute text-white hover:text-blue-700;
                 }
