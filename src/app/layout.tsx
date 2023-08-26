@@ -1,5 +1,6 @@
 import { Suspense } from "react";
-import { Inter, Montserrat, Poppins, Roboto_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
@@ -55,7 +56,7 @@ export default function RootLayout({
         <main className="mt-20">
           <Suspense fallback={<Loading />}>{children}</Suspense>
         </main>
-        <Footer />
+        <Footer /> <Analytics />
       </body>
     </html>
   );
