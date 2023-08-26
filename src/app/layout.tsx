@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body suppressHydrationWarning={true}>
-        <GoogleAnalytics GA_TRACKING_ID={"G-CJLF5JMDP8"} />
+        <GoogleAnalytics GA_TRACKING_ID={process.env.ID_ANALYTICS_GOOGLE} />
         <Header />
         <main className="mt-20">
           <Suspense fallback={<Loading />}>{children}</Suspense>
