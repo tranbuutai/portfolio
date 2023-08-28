@@ -1,26 +1,5 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-
 export default function Loading() {
-  const [isSmallViewport, setIsSmallViewport] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallViewport(window.innerWidth < 520);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const text = isSmallViewport
-    ? "Please wait a moment for my gift."
-    : "Please wait for a little bit for my present.";
+  const text = "Please wait a moment for my gift.";
 
   const adjustedText = text
     .split("")
