@@ -1,5 +1,5 @@
 const config = {
-  API_URL: "https://wly10gv8ob.execute-api.ap-southeast-2.amazonaws.com/api/",
+  API_URL: "API_URL",
   DEFAULT_REQUEST_TIMEOUT: 320000,
 };
 
