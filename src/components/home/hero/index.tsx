@@ -22,7 +22,7 @@ const HomeHero: React.FC = () => {
   }, []);
 
   return (
-    <div className="mb-8 md:mb-0">
+    <section className="mb-8 md:mb-0">
       <StarFieldBackGround />
       <div className="container relative z-10 max-w-fit font-poppins">
         <div className="relative z-10 flex h-[90vh] flex-col items-center justify-center text-white">
@@ -30,7 +30,7 @@ const HomeHero: React.FC = () => {
             className="mb-12 text-center font-bold opacity-0 transition-all ease-in-out"
             ref={(el) => (titleRef = el)}
           >
-            Hi! Welcome to My Site
+            Hi! Welcome to TBT Site
           </h1>
           <div
             className="flex flex-col text-center text-2xl font-bold opacity-0 transition-all ease-in-out sm:text-3xl md:flex-row md:text-4xl 3xl:text-5xl"
@@ -61,7 +61,7 @@ const HomeHero: React.FC = () => {
             </div>
           </div>
           <div className="absolute inset-x-0 bottom-2 flex justify-center">
-            <Link href={"#home-my-information"} className="">
+            <Link href={"#home-my-information"}>
               <Icon
                 className="animate-bounce transition-all"
                 icon="icons8:down-round"
@@ -73,7 +73,7 @@ const HomeHero: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
