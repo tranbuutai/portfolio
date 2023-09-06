@@ -145,7 +145,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
   };
 
   return (
-    <div
+    <section
       id="home-my-experience"
       className="flex min-h-screen flex-col items-center justify-center gap-16 md:gap-28"
     >
@@ -158,7 +158,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
           renderExperiences(experience, index),
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

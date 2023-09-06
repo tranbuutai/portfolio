@@ -41,13 +41,13 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
   }, []);
 
   return (
-    <div
+    <section
       id="home-my-information"
       className="min-h-screen md:flex md:flex-col md:items-center md:justify-center md:gap-28 md:space-x-6"
     >
       <h1 className="mb-5 text-center font-bold">About Me</h1>
       <div className="gap-6 md:flex md:items-start md:justify-between md:space-x-6">
-        <div className="md:w-2/3">
+        <article className="md:w-2/3">
           <h2
             className="my-information-0 mb-2  font-semibold"
             ref={(el) => (information[0] = el)}
@@ -76,7 +76,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
             my skills to create innovative solutions and drive technological
             advancement.
           </p>
-        </div>
+        </article>
 
         <div
           className="my-information-side-content space-y-4 md:w-1/3"
@@ -135,6 +135,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
         href="https://www.topcv.vn/xem-cv/VwlSBwFYBVANAw1SBl0PAABRAAFQUw0ABQ5TXA1e82"
         className="information-animated-text mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
         <p className="text-center font-semibold md:text-lg">
@@ -142,7 +143,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
         </p>
         <Icon icon="fxemoji:left" className="animate-x-bounce-right" />
       </Link>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ interface HomeContactInformationProps {}
 
 const HomeContactInformation: React.FC<HomeContactInformationProps> = () => {
   return (
-    <div
+    <section
       id="home-my-contact"
       className="flex min-h-screen flex-col items-center justify-center gap-16 md:h-screen md:gap-28"
     >
@@ -44,7 +44,7 @@ const HomeContactInformation: React.FC<HomeContactInformationProps> = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
