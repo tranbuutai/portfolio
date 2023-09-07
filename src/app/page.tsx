@@ -10,7 +10,7 @@ import {
   HomeMyWork,
 } from "@/components/home";
 import { experiences, projects, techSkills } from "@/constants/home";
-import Loading from "./loading";
+import Loading from "@/components/loadingScreen";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
