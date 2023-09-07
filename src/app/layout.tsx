@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.scss";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Loading from "./loading";
 import GoogleAnalytics from "@/components/googleAnalytics";
 
 export const metadata = {
@@ -53,9 +52,7 @@ export default function RootLayout({
       <body suppressHydrationWarning={true}>
         <GoogleAnalytics GA_TRACKING_ID={process.env.ID_ANALYTICS_GOOGLE} />
         <Header />
-        <main className="mt-20">
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-        </main>
+        <main className="mt-20">{children}</main>
         <Footer /> <Analytics />
       </body>
     </html>
