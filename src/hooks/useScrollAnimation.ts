@@ -1,13 +1,13 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger plugin
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
-interface ScrollAnimationOptions {
+type ScrollAnimationOptions = {
   selector: string;
   scrollTrigger: gsap.DOMTarget | ScrollTrigger.Vars;
   delay?: number;
-}
+};
 
 const useScrollAnimation = ({
   selector,
