@@ -11,7 +11,7 @@ export const metadata = {
   icons: { icon: "/favicon.ico" },
   title: {
     default: "Trần Bửu Tài | TBT",
-    template: "&s | TBT",
+    template: "%s | TBT",
   },
   description:
     "Enhance your online presence with Trần Bửu Tài, a skilled Software Engineer based in Vietnam. With a focus on front-end development, cloud technologies, and crafting exceptional websites, I am committed to continuous learning and technological advancement. Join me on my journey of growth and innovation in the tech world.",
