@@ -1,37 +1,9 @@
-"use client";
+import Home from "@/components/pages/home";
 
-import React, { useEffect, useRef, useState } from "react";
-
-import {
-  HomeContactInformation,
-  HomeExperience,
-  HomeHero,
-  HomeMyInformation,
-  HomeMyWork,
-} from "@/components/home";
-import { experiences, projects, techSkills } from "@/constants/home";
-import Loading from "@/components/loadingScreen";
-
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
-  if (isLoading) {
-    return <Loading />;
-  }
-
+export default async function App() {
   return (
     <>
-      <HomeHero />
-      <section className="container mx-auto space-y-8 md:space-y-16">
-        <HomeMyInformation skills={techSkills} />
-        <HomeExperience experiences={experiences} />
-        <HomeMyWork projects={projects} />
-        <HomeContactInformation />
-      </section>
+      <Home />
     </>
   );
 }
