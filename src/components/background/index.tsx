@@ -46,7 +46,7 @@ const StarFieldBackGround = (props: Props) => {
     );
   };
   return (
-    <div className="absolute inset-0 z-0">
+    <div className="fixed inset-0 z-0">
       <Suspense fallback={null}>
         <Canvas shadows>
           <ItemShow />
