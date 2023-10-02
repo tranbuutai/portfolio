@@ -43,7 +43,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
   return (
     <section
       id="home-my-information"
-      className="min-h-screen md:flex md:flex-col md:items-center md:justify-center md:gap-28 md:space-x-6"
+      className="relative min-h-screen md:flex md:flex-col md:items-center md:justify-center md:gap-28 md:space-x-6"
     >
       <h1 className="mb-5 text-center font-bold">About Me</h1>
       <div className="gap-6 md:flex md:items-start md:justify-between md:space-x-6">
