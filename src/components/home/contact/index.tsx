@@ -8,7 +8,7 @@ const HomeContactInformation: React.FC<HomeContactInformationProps> = () => {
   return (
     <div
       id="home-my-contact"
-      className="flex min-h-screen flex-col items-center justify-center gap-16 md:h-screen md:gap-28"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-16 md:h-screen md:gap-28"
     >
       <h2 className="text-center font-bold">Contact</h2>
       <div className="flex w-full flex-col gap-4 md:flex-row md:items-center md:justify-between lg:gap-6">
