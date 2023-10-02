@@ -147,7 +147,7 @@ const HomeExperience: React.FC<HomeExperienceProps> = ({ experiences }) => {
   return (
     <section
       id="home-my-experience"
-      className="flex min-h-screen flex-col items-center justify-center gap-16 md:gap-28"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-16 md:gap-28"
     >
       <h2 className="text-center font-bold">My Experiences</h2>
       <div className="relative w-full">
