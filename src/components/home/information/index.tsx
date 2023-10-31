@@ -6,7 +6,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 import { useScrollAnimation } from "@/hooks";
-import BounceText from "@/components/bounceText";
+import AnimationText from "@/components/home/information/informationAnimationText";
 interface IInformation {
   skills: string[];
 }
@@ -140,9 +140,9 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
       >
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
         <p className="text-center font-semibold md:text-lg">
-          <BounceText
+          <AnimationText
             text="Check on my CV for more information about me."
-            delay={0.1}
+            delay={0.15}
           />
         </p>
         <Icon icon="fxemoji:left" className="animate-x-bounce-right" />
