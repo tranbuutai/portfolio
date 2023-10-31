@@ -15,8 +15,8 @@ const HomeHero: React.FC = () => {
 
   useEffect(() => {
     const animationInit = () => {
-      fadeInUp(titleRef);
-      fadeInUp(subtitleRef, 0.5);
+      fadeInUp(titleRef, 0.5);
+      fadeInUp(subtitleRef, 0.8);
     };
     return animationInit();
   }, []);

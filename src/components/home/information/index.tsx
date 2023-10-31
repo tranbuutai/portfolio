@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 import { useScrollAnimation } from "@/hooks";
+import AnimationText from "@/components/home/information/informationAnimationText";
 interface IInformation {
   skills: string[];
 }
@@ -133,13 +134,16 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
       </div>
       <Link
         href="https://www.topcv.vn/xem-cv/VwlSBwFYBVANAw1SBl0PAABRAAFQUw0ABQ5TXA1e82"
-        className="information-animated-text mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
+        className="mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Icon icon="fxemoji:right" className="animate-x-bounce-left" />
         <p className="text-center font-semibold md:text-lg">
-          Check on my CV for more information about me.
+          <AnimationText
+            text="Check on my CV for more information about me."
+            delay={0.15}
+          />
         </p>
         <Icon icon="fxemoji:left" className="animate-x-bounce-right" />
       </Link>

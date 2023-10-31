@@ -7,29 +7,25 @@
   @apply transition-all;
   animation: moveLeftPointer 2s infinite;
 }
-
-.information-animated-text {
-  animation: colorScaleAnimation 5s infinite;
-  opacity: 0.8;
-}
-
-@keyframes colorScaleAnimation {
+/* Define the keyframes for the text animation */
+/* Define the keyframes for the text animation */
+@keyframes text-animation {
   0% {
-    transform: scale(1);
-    color: #ffa500;
-  }
-  25% {
-    transform: scale(1.1);
-    color: #00ced1;
+    font-weight: normal; /* Start with normal font weight */
   }
   50% {
-    transform: scale(1);
-    color: #ff69b4;
+    font-weight: 800; /* Change to bold font weight */
+    font-size: larger;
   }
-  75% {
-    transform: scale(1.1);
-    color: #32cd32;
+  100% {
+    font-weight: normal; /* Return to normal font weight */
   }
+}
+
+/* Style for the individual letters */
+.animate-letter-animation {
+  animation: text-animation 1s ease-in-out infinite;
+  animation-fill-mode: both;
 }
 
 @keyframes moveRightPointer {
