@@ -133,7 +133,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
         </div>
       </div>
       <Link
-        href="https://www.topcv.vn/xem-cv/VwlSBwFYBVANAw1SBl0PAABRAAFQUw0ABQ5TXA1e82"
+        href="https://tinyurl.com/cv-tranbuutai"
         className="mt-4 flex items-center justify-center gap-4 text-lg font-semibold md:mt-0"
         target="_blank"
         rel="noopener noreferrer"
