@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
 
 import StarFieldBackGround from "@/components/background";
 import useFadeInUp from "@/hooks/useFadeInUp";
+import ScrollLink from "@/components/scrollLink";
 
 const HomeHero: React.FC = () => {
   const fadeInUp = (ref: HTMLHeadingElement | null, delay = 0.2) =>
@@ -60,8 +60,8 @@ const HomeHero: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="absolute inset-x-0 bottom-2 flex justify-center">
-            <Link href={"#home-my-information"}>
+          <nav className="absolute inset-x-0 bottom-2 flex justify-center">
+            <ScrollLink href={"#home-my-information"}>
               <Icon
                 className="animate-bounce transition-all"
                 icon="icons8:down-round"
@@ -69,8 +69,8 @@ const HomeHero: React.FC = () => {
                 width={48}
                 height={48}
               />
-            </Link>
-          </div>
+            </ScrollLink>
+          </nav>
         </div>
       </div>
     </section>

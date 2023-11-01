@@ -3,9 +3,6 @@
 @import "tailwindcss/utilities";
 
 @layer base {
-  html {
-    scroll-behavior: smooth !important;
-  }
   body {
     @apply h-full overflow-x-hidden bg-black-500 font-inter font-normal text-slate-300;
     @media (min-width: 1024px) {
