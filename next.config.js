@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-};
 
-module.exports = nextConfig;
+const withPlugins = require("next-compose-plugins");
+const withSvgr = require("next-plugin-svgr");
+
+const nextConfig = {};
+
+module.exports = withPlugins([[withSvgr()]], nextConfig);
