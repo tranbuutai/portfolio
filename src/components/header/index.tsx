@@ -2,14 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import Lottie, { AnimationItem } from "lottie-web";
 
 import animationData from "@/assets/lottie/hamburger-menu-to-x.json";
 import Hamburger from "./Hamburger";
-import menuIcon from "@/assets/components/header/menu.svg";
-import logo from "@/assets/icons/logo-with-text.svg";
+import MenuIcon from "@/assets/components/header/menu.svg";
+import Logo from "@/assets/icons/logo-with-text.svg";
 
 type MenuState = {
   clicked: boolean;
@@ -95,12 +94,7 @@ const Header: React.FC = () => {
           <div className="inner-header">
             <div className="logo">
               <Link href={"/"}>
-                <Image
-                  className="mt-[5px] w-20"
-                  priority
-                  src={logo}
-                  alt="logo"
-                />
+                <Logo className="mt-[5px] w-20" />
               </Link>
             </div>
             <div className="menu">
@@ -110,14 +104,7 @@ const Header: React.FC = () => {
                 onClick={handleClickMenu}
                 className="relative h-8 w-8"
               >
-                {!hasChild && (
-                  <Image
-                    className="mt-[5px] h-full w-full"
-                    priority
-                    src={menuIcon}
-                    alt="menu icon"
-                  />
-                )}
+                {!hasChild && <MenuIcon className="mt-[5px] h-full w-full" />}
               </button>
             </div>
           </div>

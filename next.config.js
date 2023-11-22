@@ -5,4 +5,19 @@ const withSvgr = require("next-plugin-svgr");
 
 const nextConfig = {};
 
-module.exports = withPlugins([[withSvgr()]], nextConfig);
+module.exports = withPlugins(
+  [
+    [
+      withSvgr({
+        svgrOptions: {
+          titleProp: true,
+          icon: true,
+          svgProps: {
+            height: "auto",
+          },
+        },
+      }),
+    ],
+  ],
+  nextConfig,
+);
