@@ -9,7 +9,7 @@ type ScrollAnimationOptions = {
   delay?: number;
 };
 
-const useScrollAnimation = ({
+const UseScrollAnimation = ({
   selector,
   scrollTrigger,
   delay,
@@ -25,4 +25,4 @@ const useScrollAnimation = ({
   });
 };
 
-export default useScrollAnimation;
+export default UseScrollAnimation;

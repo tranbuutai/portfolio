@@ -1,5 +1,6 @@
-import React, { useEffect, useState, ComponentType, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import classNames from "classnames";
+import { ReactNode } from "react";
 
 type LoadingProps = {
   isLoading: boolean;
@@ -37,15 +38,15 @@ const Loading: React.FC<LoadingProps> = ({ isLoading, children }) => {
   );
 };
 
-function withLoading<P>(Component: ComponentType<P>) {
-  return function WrappedComponent(props: JSX.IntrinsicAttributes & P) {
+function withLoading(Component: ReactNode) {
+  return function WrappedComponent() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
       setIsLoading(false);
     }, []);
 
-    return <Loading isLoading={isLoading}>{<Component {...props} />}</Loading>;
+    return <Loading isLoading={isLoading}>{Component}</Loading>;
   };
 }
 

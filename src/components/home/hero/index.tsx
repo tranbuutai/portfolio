@@ -4,12 +4,12 @@ import React, { useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
 
 import StarFieldBackGround from "@/components/background";
-import useFadeInUp from "@/hooks/useFadeInUp";
+import UseFadeInUp from "@/hooks/useFadeInUp";
 import ScrollLink from "@/components/scrollLink";
 
 const HomeHero: React.FC = () => {
   const fadeInUp = (ref: HTMLHeadingElement | null, delay = 0.2) =>
-    useFadeInUp(ref, delay);
+    UseFadeInUp(ref, delay);
   let titleRef: any = useRef([]);
   let subtitleRef: any = useRef([]);
 
@@ -38,7 +38,7 @@ const HomeHero: React.FC = () => {
           >
             <div className="md:mr-2">My name is Tai, </div>
             <div className="flex">
-              and I'm a
+              and I&apos;m a
               <div className="hero-text-animation md:ml-2">
                 <ul>
                   <li className="text-2xl text-[#ea4335] sm:text-3xl md:text-4xl 3xl:text-5xl">
