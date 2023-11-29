@@ -1,4 +1,4 @@
-import useFadeInUp from "@/hooks/useFadeInUp";
-import useScrollAnimation from "./useScrollAnimation";
+import UseFadeInUp from "@/hooks/useFadeInUp";
+import UseScrollAnimation from "./useScrollAnimation";
 
-export { useScrollAnimation, useFadeInUp };
+export { UseScrollAnimation, UseFadeInUp };

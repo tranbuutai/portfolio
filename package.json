@@ -40,6 +40,8 @@
     "@iconify/react": "^4.1.0",
     "@types/three": "^0.152.1",
     "add": "^2.0.6",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "next-compose-plugins": "^2.2.1",

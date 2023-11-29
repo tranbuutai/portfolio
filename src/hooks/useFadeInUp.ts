@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-const useFadeInUp = (node: HTMLHeadingElement | null, delay: number) => {
+const UseFadeInUp = (node: HTMLHeadingElement | null, delay: number) => {
   gsap.fromTo(
     node,
     {
@@ -17,4 +17,4 @@ const useFadeInUp = (node: HTMLHeadingElement | null, delay: number) => {
   );
 };
 
-export default useFadeInUp;
+export default UseFadeInUp;

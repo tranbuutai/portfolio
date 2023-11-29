@@ -24,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default withLoading(Home);
+export default withLoading(<Home />);

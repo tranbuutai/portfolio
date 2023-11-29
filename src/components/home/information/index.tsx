@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
 import { gsap } from "gsap";
@@ -5,7 +6,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
-import { useScrollAnimation } from "@/hooks";
+import { UseScrollAnimation } from "@/hooks";
 import AnimationText from "@/components/home/information/informationAnimationText";
 interface IInformation {
   skills: string[];
@@ -20,7 +21,7 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
     scrollTrigger: gsap.DOMTarget | ScrollTrigger.Vars,
     delay?: number,
   ) => {
-    useScrollAnimation({ selector, scrollTrigger, delay });
+    UseScrollAnimation({ selector, scrollTrigger, delay });
   };
 
   useEffect(() => {
@@ -65,9 +66,9 @@ const HomeMyInformation: React.FC<IInformation> = ({ skills }) => {
             className="my-information-2 mb-2"
             ref={(el) => (information[2] = el)}
           >
-            Hello, I'm Trần Bửu Tài, also known as Tom Tran, a dedicated
+            Hello, I&apos;m Trần Bửu Tài, also known as Tom Tran, a dedicated
             Software Engineer based in Can Tho, Vietnam. With over two years of
-            professional experience, I've honed my skills in front-end
+            professional experience, I&apos;ve honed my skills in front-end
             development and cloud technologies. My passion lies in crafting
             intuitive, engaging websites that enhance user experience. <br />I
             am committed to continuous learning and always open to new ideas
